@@ -1,0 +1,1 @@
+<?phpabstract class Model_CMS{	var $mysql;	var $load;	function __construct()	{		require_once 'system/framework/class.mysql.php';		$this->mysql = new Mysql();		$this->load = new Load();	}}

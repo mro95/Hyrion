@@ -1,0 +1,28 @@
+<?php
+class Load
+{
+	function model($model, $data = null)
+	{	
+		if($data)
+		{
+	 		return new $model($data);
+		}
+		else
+		{
+			return new $model();
+		}
+	}
+	
+	function helper($helper, $data = null)
+	{
+		if($data)
+		{
+	 		return new $helper($data);
+		}
+		else
+		{
+			return new $helper();
+		}
+	}
+}
+?>

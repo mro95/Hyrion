@@ -1,0 +1,23 @@
+<?php
+$dir = "application";
+$files = glob($dir."/*",GLOB_ONLYDIR);
+$file_a = array();
+try
+{
+	if(count($files) > 0)
+	{
+		foreach($files as $file)
+		{
+			array_push($file_a,$file);
+		}
+	}
+	else
+	{
+		throw new Exception('No Dirs');
+	}
+}
+catch (Exception $e) {
+    echo 'Caught exception: ',  $e->getMessage(), "\n";
+}
+print_r($file_a);
+?>
